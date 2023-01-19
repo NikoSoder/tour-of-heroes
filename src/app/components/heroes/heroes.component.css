@@ -1,0 +1,8 @@
+ul {
+  list-style: none;
+}
+
+.heroes button.selected {
+  background-color: black;
+  color: white;
+}
