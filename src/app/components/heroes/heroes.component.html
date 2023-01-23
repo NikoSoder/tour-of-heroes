@@ -1,18 +1,13 @@
 <h2 class="text-2xl mb-3">My Heroes</h2>
-<div class="flex flex-row space-x-20">
-  <ul class="heroes flex flex-col space-y-3 mb-5">
+<div class="flex flex-row mb-5">
+  <ul class="heroes space-y-4">
     <li *ngFor="let hero of heroes">
-      <button
-        [class.selected]="hero === selectedHero"
-        class="bg-blue-700 rounded-lg py-1 px-3 text-blue-100 border border-stone-200 shadow hover:bg-blue-600"
-        type="button"
-        (click)="onSelect(hero)"
+      <a
+        class="bg-blue-600 text-stone-100 py-2 px-3 rounded hover:bg-blue-700 shadow"
+        routerLink="/detail/{{ hero.id }}"
       >
-        <span class="mr-2">{{ hero.id }}</span>
-        <span>{{ hero.name }}</span>
-      </button>
+        <span class="">{{ hero.id }}</span> {{ hero.name }}
+      </a>
     </li>
   </ul>
-
-  <app-hero-detail [hero]="selectedHero"></app-hero-detail>
 </div>
