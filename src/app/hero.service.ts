@@ -23,4 +23,10 @@ export class HeroService {
     this.messageService.add(`HeroService: fetched hero id=${id}`);
     return of(hero);
   }
+
+  addHero(newHero: Hero): Observable<Hero[]> {
+    console.log(newHero);
+    const heroes = of(HEROES);
+    return heroes;
+  }
 }

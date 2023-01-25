@@ -1,0 +1,23 @@
+<div class="mb-5 w-1/2 md:w-full bg-stone-100 px-4 py-7 rounded shadow-md">
+  <h2 class="text-2xl mb-2">Hero form</h2>
+  <form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
+    <div class="flex flex-col mb-3">
+      <label class="font-semibold mb-1">Name</label>
+      <input
+        class="bg-stone-100 border border-stone-400 shadow-md rounded p-1 pl-2 hover:border-blue-600"
+        placeholder="Name"
+        type="text"
+        formControlName="name"
+      />
+    </div>
+    <div>
+      <button
+        [disabled]="!heroForm.valid"
+        type="submit"
+        class="bg-blue-700 text-white py-1 w-full rounded-md hover:bg-blue-600 hover:shadow hover:shadow-blue-200"
+      >
+        SUBMIT
+      </button>
+    </div>
+  </form>
+</div>
