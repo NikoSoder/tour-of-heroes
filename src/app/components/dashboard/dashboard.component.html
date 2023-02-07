@@ -1,4 +1,5 @@
 <h2 class="text-3xl mb-3">Top Heroes</h2>
+<div *ngIf="!heroes.length" class="loader"></div>
 <div class="mb-5">
   <ul class="flex flex-row flex-wrap">
     <li
